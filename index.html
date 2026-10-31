@@ -59,7 +59,7 @@
       #rotate { z-index: 20; }
       #pause button { display: block; width: 220px; margin: 8px auto; }
     </style>
-    <script type="module" crossorigin src="./assets/index-BOQ7YWI9.js"></script>
+    <script type="module" crossorigin src="./assets/index-E7-0nCgd.js"></script>
   </head>
   <body>
     <canvas id="game"></canvas>
@@ -67,18 +67,18 @@
     <div id="title" class="overlay show">
       <div class="panel">
         <h1>HOST</h1>
-        <p class="tag">죽으면, 적의 몸으로 갈아탄다</p>
+        <p class="tag">적의 몸을 빼앗아 쓰고, 버린 몸은 터뜨린다</p>
         <button id="btn-start" class="primary">시작</button>
         <div class="rooms">
-          <span>방 선택</span>
+          <span>전장 선택</span>
           <button data-room="0">1</button><button data-room="1">2</button><button data-room="2">3</button>
         </div>
         <div class="help">
-          <div><b>PC</b>이동 A·D · 점프 W/Space · 내려가기 S · 빙의 마우스 오른쪽(K)을 누른 채 조준, 놓으면 돌진 · 기술 마우스 왼쪽(J) · 다시 R · 일시정지 Esc</div>
-          <div><b>휴대폰 (가로)</b>왼쪽 엄지로 이동(위로 밀면 점프) · 「빙의」를 누른 채 끌어 조준, 놓으면 돌진(톡 누르면 가장 가까운 적) · 「공격」은 몸의 기술</div>
-          <div><b>규칙</b>적에게 돌진하면 그 몸을 빼앗고, 떠난 몸은 쓰러진다. 빼앗은 몸은 잠시 적에게 들키지 않는다(기술을 쓰면 바로 들킨다). 맞으면 죽는다. 빙의를 누르고 있는 동안 시간이 느려진다. 몸마다 기술 한 번 — 권총은 한 줄을 꿰뚫고, 산탄총은 앞을 쓸고, 칼은 돌진해 벤다. 빗나가면 영혼은 0.5초 안에 다른 몸에 닿아야 한다. 적을 모두 쓰러뜨리면 문이 열린다.</div>
+          <div><b>PC</b>이동 A·D · 점프 W/Space · 내려가기 S · 빙의 마우스 오른쪽(K) — 누른 채 조준, 놓으면 돌진 · 공격 마우스 왼쪽(J), 무제한 · 다시 R · 일시정지 Esc</div>
+          <div><b>휴대폰 (가로)</b>왼쪽 엄지로 이동(위로 밀면 점프) · 「빙의」를 누른 채 끌어 조준, 놓으면 돌진(톡 누르면 가장 가까운 적) · 「공격」은 무제한</div>
+          <div><b>규칙</b>적이 파도처럼 몰려온다. 적에게 돌진하면 그 몸을 빼앗고, 버린 몸은 폭발해 주변 적을 쓸어버린다. 몸마다 체력 3칸(거한 5칸) — 다 깎이면 영혼이 튀어나오고, 1초 안에 다른 몸을 못 잡으면 죽는다. 처치하고 2.5초 안에 갈아타면 점수 배수가 오른다. 거한은 약해져야 빼앗을 수 있다. 칼 3연베기 · 권총 연사 · 산탄총 밀쳐내기 · 거한 내려찍기.</div>
         </div>
-        <p class="ver">손맛 시험판 v0.5 · 변장 · 회색 상자 · 방 3개 · 몸 3종 (칼잡이 · 권총 · 산탄총)</p>
+        <p class="ver">손맛 시험판 v0.6 · 핵앤슬래시 · 회색 상자 · 전장 3개 · 몸 4종 (칼잡이 · 권총 · 산탄총 · 거한)</p>
       </div>
     </div>
 
@@ -96,7 +96,7 @@
         <h2>시험판 끝</h2>
         <p id="end-stats"></p>
         <ol class="q">
-          <li>카타나 제로 같은 손맛인가요?</li>
+          <li>몰려오는 적을 쓸어버리는 맛이 있나요?</li>
           <li>몸을 갈아타는 게 재밌나요?</li>
         </ol>
         <p class="small">두 질문의 답과 느낀 점을 총괄 세션에 알려 주세요.</p>
